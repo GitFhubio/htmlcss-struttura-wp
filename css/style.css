@@ -1,8 +1,9 @@
+/* reset */
 *{box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-
+/* regole ai 3 blocchi principali */
 .container{width:1200px;
 margin:20px auto;}
 
@@ -19,6 +20,7 @@ footer{
 main{
   margin:6px 0;
 }
+/* applico clearfix al main,che contiene i 3 float */
 main::after{
   clear:both;
   content:"";
@@ -27,19 +29,24 @@ main::after{
 .float{
   float:left;
 }
+/* tengo conto delle differenti altezze e colori dei float */
 .float:first-child,.float:last-child {
   width: 25%;
 }
+
 .float:first-child,.float:last-child>div{
   background-color: rgb(214,144,228);
 }
-
 .float:first-child{ height:280px;}
+
+/* di seguito avrei potuto farlo col padding,ma ho preferito andare di margin */
 
 .float:nth-child(2){width: calc(100% / 2 - 30px);
   margin:0 15px;
     background-color: rgb(129,0,129);
 }
+/* vedo il secondo e il terzo float come aventi stessa altezza
+e poi agisco sui due figli di quest'ultimo dandogli stessa altezza% e margine inferiore */
 
 .float:nth-child(2),.float:nth-child(3) {height:400px;
 }
