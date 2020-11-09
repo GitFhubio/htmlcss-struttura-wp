@@ -3,6 +3,9 @@ box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+ul{
+  list-style: none;
+}
 body{
   background-color: rgb(156,132,109);
 }
@@ -16,6 +19,9 @@ height:200px;
 
 h3 img{
   vertical-align: middle;
+}
+.float ul li{
+  color:green;
 }
 .float:first-child,.float:nth-child(2),.float:last-child>div{
   padding:20px;
