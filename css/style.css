@@ -28,16 +28,25 @@ main::after{
 .float{
   float:left;
 }
-.float:first-child,.float:last-child{
-  background-color: rgb(214,144,228);
+.float:first-child,.float:last-child {
   width: 25%;
 }
-.float:first-child{ height:100px;}
+.float:first-child,.float:last-child>div{
+  background-color: rgb(214,144,228);
+}
+
+.float:first-child{ height:280px;}
 
 .float:nth-child(2){width: calc(100% / 2 - 30px);
   margin:0 15px;
     background-color: rgb(129,0,129);
 }
 
-.float:nth-child(2),.float:nth-child(3) {height:150px;
+.float:nth-child(2),.float:nth-child(3) {height:400px;
+}
+
+.float:last-child>div {
+  width:100%;
+  margin-bottom: 10px;
+  height:calc(50% - 10px);
 }
